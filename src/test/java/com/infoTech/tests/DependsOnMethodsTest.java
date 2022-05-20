@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class PriorityTest {
+public class DependsOnMethodsTest {
     WebDriver driver;
     @BeforeClass
     public void setUp(){
@@ -20,16 +20,16 @@ public class PriorityTest {
 
     }
 
-    @Test (priority = 3)
+    @Test
     public void amazonArama(){
         driver.get("http://amazon.com");
     }
-    @Test (priority = 2)
+    @Test
     public void googleArama(){
         driver.get("http://google.com");
     }
 
-    @Test (priority = 1)
+    @Test
     public void facebookArama(){
         driver.get("http://facebook.com");
     }

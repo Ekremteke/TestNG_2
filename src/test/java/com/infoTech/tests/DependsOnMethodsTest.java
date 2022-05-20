@@ -20,18 +20,20 @@ public class DependsOnMethodsTest {
 
     }
 
-    @Test
-    public void amazonArama(){
-        driver.get("http://amazon.com");
-    }
-    @Test
+    @Test (dependsOnMethods = "facebookArama")
     public void googleArama(){
         driver.get("http://google.com");
     }
 
-    @Test
+    @Test (dependsOnMethods = "amazonArama")
     public void facebookArama(){
         driver.get("http://facebook.com");
+    }
+
+
+    @Test
+    public void amazonArama(){
+        driver.get("http://amazon.com");
     }
 
     @AfterClass

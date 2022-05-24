@@ -36,5 +36,7 @@ public class WindowsHandleTest extends TestBase {
         Thread.sleep(2000);
         driver.switchTo().window(handle);
 
+//        Thread.sleep(3000);
+//        driver.switchTo().window("96189C747502F4DCC44B75B96B99777E");
     }
 }

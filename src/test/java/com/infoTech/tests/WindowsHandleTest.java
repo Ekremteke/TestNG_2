@@ -1,2 +1,4 @@
-package com.infoTech.tests;public class WindowsHandleTest {
+package com.infoTech.tests;
+
+public class WindowsHandleTest {
 }

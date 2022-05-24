@@ -1,4 +1,11 @@
 package com.infoTech.tests;
 
-public class Test {
+import com.infoTech.utilities.TestBase;
+import org.testng.annotations.Test;
+
+public class Test2 extends TestBase {
+
+    @Test
+    public void googleArama() {
+        driver.get("https://google.com");}
 }

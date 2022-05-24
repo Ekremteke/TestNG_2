@@ -16,10 +16,22 @@ public class ActionsClass extends TestBase {
         actions.contextClick(element).perform();
     }
     @Test
-    public void ciftTiklama(){
+    public void ciftTiklama() throws InterruptedException {
         driver.get("https://demo.guru99.com/test/simple_context_menu.html");
+        WebElement guvenlikDuvar=driver.findElement(By.xpath("//*[.='Consent']"));
+        Thread.sleep(3000);
+        guvenlikDuvar.click();
         Actions actions=new Actions(driver);
         WebElement ciftTikla= driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));
         actions.doubleClick(ciftTikla).perform();
+    }
+    @Test
+    public void mouse() throws InterruptedException {
+        driver.get("http://amazon.com");
+        Thread.sleep(3000);
+        Actions actions=new Actions(driver);
+        WebElement sign= driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
+        Thread.sleep(3000);
+        actions.moveToElement(sign).perform();
     }
 }
